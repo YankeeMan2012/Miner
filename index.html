@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="shortcut icon" href="assets/img/icon.ico">
+  <title>Miner!</title>
+</head>
+<body>
+  <div id="gameSettings" class="game-settings">
+    <div id="login-box">
+      <div class="logo"></div>
+      <div class="identification">
+        <input type="text" id="height" class="first unset" placeholder="Height [1 - 40]" />
+        <input type="text" id="width"  class="unset" placeholder="Width [1 - 20]" />
+        <input type="text" id="mines"  class="last unset" placeholder="Mines [1 - Height*Width]" />
+        <button id="start">Start!</button>
+      </div>
+    </div>
+  </div>
+  <div id="gameField">
+    <div id="endGame">
+      <div id="popup" class="hidden"></div>
+    </div>
+    <div id="game" >
+      <div id="root" class="hidden"></div>
+      <div id="infoField" class="hidden">
+        <span class="number-wrapper">
+          <span class="number" id="timer">0</span>
+        </span>
+        <span class="number-wrapper">
+          <span class="number" id="minesCounter">0</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

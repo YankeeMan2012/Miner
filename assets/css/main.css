@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #778484;
+}
+
+#gameField {
+  -webkit-user-select: none;
+}
+
+#endGame {
+  height: 60px;
+  margin-top: 50px;
+  width: auto;
+}
+
+#game {
+  width: auto;
+  margin: 20px auto;
+  display: table;
+}
+
+#root {
+  display: table;
+  margin: 0 auto;
+}
+
+#infoField {
+  margin-top: 20px;
+}
+
+.field-item {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-top: -4px;
+}
+
+.hidden {
+  display: none;
+}
+
+.mine {
+  background: url(../img/mine.jpg);
+}
+
+.number0 {
+  background: url(../img/null.jpg);
+}
+
+.number1 {
+  background: url(../img/one.jpg);
+}
+
+.number2 {
+  background: url(../img/two.jpg);
+}
+
+.number3 {
+  background: url(../img/three.jpg);
+}
+
+.number4 {
+  background: url(../img/four.jpg);
+}
+
+.number5 {
+  background: url(../img/five.jpg);
+}
+
+.number6 {
+  background: url(../img/six.jpg);
+}
+
+.number7 {
+  background: url(../img/seven.jpg);
+}
+
+.number8 {
+  background: url(../img/eight.jpg);
+}
+
+.target {
+  background: url(../img/target.jpg);
+}
+
+.free {
+  background: url(../img/free.jpg);
+}
+.free:hover {
+  background: url(../img/hoverFree.jpg);
+}
+
+.flag {
+  background: url(../img/flag.jpg);
+}
+.flag:hover {
+  background: url(../img/hoverFlag.jpg);
+}
+
+.winMine {
+  background: url(../img/winMine.jpg);
+}
+
+#popup {
+  font-size: 30px;
+  margin: 0px auto;;
+  width: 436px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: rgb(245,245,245);
+  text-shadow: 0 -1px rgba(0,0,0,.1);
+  border-radius: 3px;
+  animation: pulsate 1.2s linear infinite;
+}
+
+.victory-popup {
+  background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
+  box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+}
+
+.lose-popup {
+  background: #e8451e linear-gradient(#ff411c, #a20505);
+  box-shadow: inset #ea6f6f 0 -1px 1px, inset 0 1px 1px #d07522, #880404 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+}
+
+@-webkit-keyframes pulsate {
+  50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+@keyframes pulsate {
+  50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+
+.number-wrapper {
+  position: relative;
+  margin: 0 40px 0 40px;
+}
+
+.number-wrapper:last-child {
+  float: right;
+}
+
+.number {
+  display: inline-block;
+  background: #000;
+  background-image: -webkit-linear-gradient(bottom, #000000 2%, #3c3c3c 50%, #000000 100%);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 7px;
+  background-clip: padding-box;
+  padding: 0 12px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  border: 1px solid #555;
+  box-shadow: inset 0 4px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 3px 3px #000000;
+  width: 100px;
+  font-size: 60px;
+  color: #eee;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#start {
+  margin: 10px auto;
+  display: block;
+  width: 200px;
+  height: 34px;
+  font-size: 90%;
+  font-weight: 700;
+  color: rgb(209,209,217);
+  text-decoration: none;
+  text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+  padding: .5em 1em;
+  outline: none;
+  border-radius: 3px;
+  background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);
+  box-shadow:
+   0 1px rgba(255,255,255,.2) inset,
+   0 3px 5px rgba(0,1,6,.5),
+   0 0 1px 1px rgba(0,1,6,.2);
+  transition: .2s ease-in-out;
+}
+
+#start:hover:not(:active) {
+  background: linear-gradient(rgb(126,126,134), rgb(70,71,76)) rgb(126,126,134);
+}
+
+#start:active {
+  top: 1px;
+  background: linear-gradient(rgb(76,77,82), rgb(56,57,62)) rgb(76,77,82);
+  box-shadow:
+   0 0 1px rgba(0,0,0,.5) inset,
+   0 2px 3px rgba(0,0,0,.5) inset,
+   0 1px 1px rgba(255,255,255,.1);
+}
+
+#gameSettings {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+#login-box {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 60px;
+  border-radius: 10px;
+  padding-top: 20px;
+}
+
+#login-box div.logo {
+  width: 380px;
+  height: 310px;
+  margin: auto;
+  background: center url("../img/logo.jpg") no-repeat;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+#login-box div.identification {
+  margin: 12px auto 0 auto;
+  width: 400px;
+  z-index: 10;
+}
+
+#login-box div.identification input {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 34px;
+  border: 0;
+  line-height: 34px;
+  text-indent: 10px;
+  font-size: 20px;
+  color: black;
+  z-index: 10;
+}
+
+#login-box div.identification input.first {
+  border-radius: 10px 10px 0 0;
+}
+
+#login-box div.identification input {
+  margin-bottom: 10px;
+}
+
+#login-box div.identification input.last {
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 0;
+}
